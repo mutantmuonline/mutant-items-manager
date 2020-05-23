@@ -1,0 +1,8 @@
+version: "3.5"
+
+services:
+  php:
+    build: ./docker/php
+    volumes:
+      - ./:/var/www
+      - ./docker/.logs/php:/var/log/php

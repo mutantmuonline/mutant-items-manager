@@ -1,0 +1,10 @@
+/vendor/
+/docker/logs
+/docker/.logs
+/phpmd.xml
+/bin/phpstan.neon
+/.idea/
+/.phpcs-cache
+/phpcs.xml
+/.php_cs
+/.php_cs.cache
