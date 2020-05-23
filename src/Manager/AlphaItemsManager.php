@@ -33,7 +33,7 @@ class AlphaItemsManager
         $itemsPrototypes = new \ArrayObject();
 
         // Map string to prototype item model
-        foreach ($decodedItemsStrings->getIterator() as $itemString) {
+        foreach ($decodedItemsStrings as $itemString) {
             $itemPrototype = $this->itemPrototypeMapper->fromString($itemString);
             $itemsPrototypes->append($itemPrototype);
         }
