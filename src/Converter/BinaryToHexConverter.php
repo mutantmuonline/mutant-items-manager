@@ -1,23 +1,23 @@
 <?php
 declare(strict_types=1);
 
-namespace Mutant\ItemsManager\Decoder;
+namespace Mutant\ItemsManager\Converter;
 
 use IteratorAggregate;
 
-class BinaryToHexDecoder implements DecoderInterface
+class BinaryToHexConverter implements ConverterInterface
 {
     /**
      * @var int
      */
     private $hexLength;
 
-    private function __construct(int $hexLength = 32)
+    public function __construct(int $hexLength = 32)
     {
         $this->hexLength = $hexLength;
     }
 
-    public function decode(string $binary): IteratorAggregate
+    public function convert(string $binary): IteratorAggregate
     {
         $hexString = $this->transformBinaryToHex($binary);
         $hexString = $this->removeBinaryZeroLeading($hexString);

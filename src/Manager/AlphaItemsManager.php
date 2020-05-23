@@ -3,31 +3,33 @@ declare(strict_types=1);
 
 namespace Mutant\ItemsManager\Manager;
 
-use Mutant\ItemsManager\Decoder\DecoderInterface;
+use Mutant\ItemsManager\Converter\ConverterInterface;
 use Mutant\ItemsManager\Mapper\Item\Prototype\StringToItemPrototypeMapperInterface;
 use IteratorAggregate;
 
 class AlphaItemsManager
 {
     /**
-     * @var DecoderInterface
+     * @var ConverterInterface
      */
-    private $decoder;
+    private $converter;
 
     /**
      * @var StringToItemPrototypeMapperInterface
      */
     private $itemPrototypeMapper;
 
-    public function __construct(DecoderInterface $decoder, StringToItemPrototypeMapperInterface $itemPrototypeMapper)
-    {
-        $this->decoder = $decoder;
+    public function __construct(
+        ConverterInterface $converter,
+        StringToItemPrototypeMapperInterface $itemPrototypeMapper
+    ) {
+        $this->converter = $converter;
         $this->itemPrototypeMapper = $itemPrototypeMapper;
     }
 
     public function convertBinaryToItemsPrototypes(string $binary): IteratorAggregate
     {
-        $decodedItemsStrings = $this->decoder->decode($binary);
+        $decodedItemsStrings = $this->converter->convert($binary);
         $itemsPrototypes = new \ArrayObject();
 
         // Map string to prototype of item model
