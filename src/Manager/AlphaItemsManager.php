@@ -8,6 +8,9 @@ use IteratorAggregate;
 use Mutant\ItemsManager\Converter\ConverterInterface;
 use Mutant\ItemsManager\Mapper\Item\Prototype\StringToItemPrototypeMapperInterface;
 
+/**
+ * @todo rename this to ItemPrototypeFactory
+ */
 class AlphaItemsManager
 {
     /**
