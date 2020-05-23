@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Mutant\ItemsManager\Converter;
@@ -25,7 +26,7 @@ class BinaryToHexConverter implements ConverterInterface
         $iterations = round(mb_strlen($hexString) / $this->hexLength);
         $itemsArrayOfStrings = new \ArrayObject();
 
-        for ($i = 0; $i < $iterations; $i++) {
+        for ($i = 0; $i < $iterations; ++$i) {
             $itemString = mb_substr($hexString, ($this->hexLength * $i), $this->hexLength);
             $itemsArrayOfStrings->append($itemString);
         }
@@ -42,7 +43,7 @@ class BinaryToHexConverter implements ConverterInterface
 
     protected function removeBinaryZeroLeading(string $string): string
     {
-        if (mb_substr($string, 0, 2) === '0x') {
+        if ('0x' === mb_substr($string, 0, 2)) {
             return mb_substr($string, 2);
         }
 

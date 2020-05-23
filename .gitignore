@@ -1,9 +1,8 @@
+/.idea/
 /vendor/
-/docker/logs
 /docker/.logs
 /phpmd.xml
-/bin/phpstan.neon
-/.idea/
+/phpstan.neon
 /.phpcs-cache
 /phpcs.xml
 /.php_cs

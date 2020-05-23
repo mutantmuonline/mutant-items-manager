@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Mutant\ItemsManager\Model\Item\Prototype;
@@ -32,6 +33,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $id
+     *
      * @return ItemPrototype
      */
     public function setId($id)
@@ -51,6 +53,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $level
+     *
      * @return ItemPrototype
      */
     public function setLevel($level)
@@ -70,6 +73,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $serial
+     *
      * @return ItemPrototype
      */
     public function setSerial($serial)
@@ -89,6 +93,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $type
+     *
      * @return ItemPrototype
      */
     public function setType($type)
@@ -108,6 +113,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $option
+     *
      * @return ItemPrototype
      */
     public function setOption($option)
@@ -127,6 +133,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $duration
+     *
      * @return ItemPrototype
      */
     public function setDuration($duration)
@@ -146,6 +153,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $excellent
+     *
      * @return ItemPrototype
      */
     public function setExcellent($excellent)
@@ -165,6 +173,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $sockets
+     *
      * @return ItemPrototype
      */
     public function setSockets($sockets)
@@ -184,6 +193,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $harmony
+     *
      * @return ItemPrototype
      */
     public function setHarmony($harmony)
@@ -203,6 +213,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $harmonyValue
+     *
      * @return ItemPrototype
      */
     public function setHarmonyValue($harmonyValue)
@@ -222,6 +233,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $ancient
+     *
      * @return ItemPrototype
      */
     public function setAncient($ancient)
@@ -241,6 +253,7 @@ class ItemPrototype implements ItemPrototypeInterface
 
     /**
      * @param mixed $refinery
+     *
      * @return ItemPrototype
      */
     public function setRefinery($refinery)
