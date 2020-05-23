@@ -167,7 +167,7 @@ class ItemPrototype implements ItemPrototypeInterface
      * @param mixed $sockets
      * @return ItemPrototype
      */
-    public function setSockets(array $sockets)
+    public function setSockets($sockets)
     {
         $this->sockets = $sockets;
 
