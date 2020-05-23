@@ -1,11 +1,12 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Mutant\ItemsManager\Manager;
 
+use IteratorAggregate;
 use Mutant\ItemsManager\Converter\ConverterInterface;
 use Mutant\ItemsManager\Mapper\Item\Prototype\StringToItemPrototypeMapperInterface;
-use IteratorAggregate;
 
 class AlphaItemsManager
 {
