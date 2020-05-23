@@ -3,13 +3,16 @@ declare(strict_types=1);
 
 namespace Mutant\ItemsManager\Model\Item\Prototype;
 
+/**
+ * @todo this should be DTO
+ * @todo replace `mixed` type with correct one
+ */
 class ItemPrototype implements ItemPrototypeInterface
 {
     private $id;
     private $level;
     private $serial;
     private $type;
-    private $typeFix;
     private $option;
     private $duration;
     private $excellent;
@@ -98,25 +101,6 @@ class ItemPrototype implements ItemPrototypeInterface
     /**
      * @return mixed
      */
-    public function getTypeFix()
-    {
-        return $this->typeFix;
-    }
-
-    /**
-     * @param mixed $typeFix
-     * @return ItemPrototype
-     */
-    public function setTypeFix($typeFix)
-    {
-        $this->typeFix = $typeFix;
-
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getOption()
     {
         return $this->option;
@@ -183,7 +167,7 @@ class ItemPrototype implements ItemPrototypeInterface
      * @param mixed $sockets
      * @return ItemPrototype
      */
-    public function setSockets($sockets)
+    public function setSockets(array $sockets)
     {
         $this->sockets = $sockets;
 

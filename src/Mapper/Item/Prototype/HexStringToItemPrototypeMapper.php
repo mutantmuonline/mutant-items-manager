@@ -24,7 +24,6 @@ class HexStringToItemPrototypeMapper implements StringToItemPrototypeMapperInter
         $item->setExcellent(hexdec(mb_substr($hexString, 14, 2)));
         $item->setAncient(hexdec(mb_substr($hexString, 16, 2)));
         $item->setType(hexdec(mb_substr($hexString, 18, 2)));
-        $item->setTypeFix(floor($item->getType() / 16));
         $item->setRefinery(hexdec(mb_substr($hexString, 19, 1)));
         $item->setHarmony(hexdec(mb_substr($hexString, 20, 1)));
         $item->setHarmonyValue(hexdec(mb_substr($hexString, 21, 1)));

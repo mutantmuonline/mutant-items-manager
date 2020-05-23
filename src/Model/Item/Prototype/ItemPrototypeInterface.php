@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace Mutant\ItemsManager\Model\Item\Prototype;
 
+/**
+ * @todo replace `mixed` type with correct one
+ */
 interface ItemPrototypeInterface
 {
     /**
@@ -24,12 +27,6 @@ interface ItemPrototypeInterface
      * @return mixed
      */
     public function getType();
-
-    /**
-     * @return mixed
-     */
-    public function getTypeFix();
-
 
     /**
      * @return mixed
